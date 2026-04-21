@@ -1,0 +1,14 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bali yoga retreat scenery">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="60%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1230" cy="180" r="90" fill="#fde68a" opacity="0.95"/>
+  <path d="M0 720 Q380 610 760 700 T1600 680 L1600 900 L0 900 Z" fill="#064e3b"/>
+  <path d="M0 760 Q380 650 760 740 T1600 720 L1600 900 L0 900 Z" fill="#022c22" opacity="0.8"/>
+  <text x="110" y="170" fill="#ecfeff" font-size="64" font-family="Arial, sans-serif" font-weight="700">Yoga Retreat Bali</text>
+</svg>
