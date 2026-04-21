@@ -65,7 +65,7 @@ export function productSchema(retreats: Retreat[]) {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: retreat.rating,
-        reviewCount: 120 + index * 9,
+        reviewCount: retreat.reviewCount,
       },
       offers: {
         "@type": "Offer",

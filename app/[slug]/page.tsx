@@ -6,14 +6,17 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { LeadForm } from "@/components/LeadForm";
 import { RetreatCard } from "@/components/RetreatCard";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
-import { getSeoPage, getRetreatProducts } from "@/lib/seo-pages";
+import { getSeoPage, getRetreatProducts, seoPages } from "@/lib/seo-pages";
 import { breadcrumbSchema, faqSchema, productSchema } from "@/lib/schema";
+import { toTitleCase } from "@/lib/utils";
 
 type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = "force-dynamic";
+export function generateStaticParams() {
+  return seoPages.map((page) => ({ slug: page.slug }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -98,7 +101,7 @@ export default async function SeoPage({ params }: Props) {
                 href={`/${relatedSlug}`}
                 className="rounded-full bg-emerald-50 px-3 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-100"
               >
-                {relatedSlug.replaceAll("-", " ")}
+                {toTitleCase(relatedSlug)}
               </Link>
             ))}
           </div>

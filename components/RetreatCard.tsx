@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Retreat } from "@/lib/data";
+import { whatsappPhone } from "@/lib/config";
 
 export function RetreatCard({ retreat }: { retreat: Retreat }) {
   return (
@@ -18,7 +19,7 @@ export function RetreatCard({ retreat }: { retreat: Retreat }) {
           <span className="rounded-full bg-slate-100 px-2 py-1">{retreat.duration} days</span>
           <span className="rounded-full bg-slate-100 px-2 py-1">${retreat.price}</span>
         </div>
-        <a href={`https://wa.me/6281234567890?text=I'm%20interested%20in%20${encodeURIComponent(retreat.title)}`} className="inline-flex w-full justify-center rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700">
+        <a href={`https://wa.me/${whatsappPhone}?text=I'm%20interested%20in%20${encodeURIComponent(retreat.title)}`} className="inline-flex w-full justify-center rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700">
           Book via WhatsApp
         </a>
       </div>

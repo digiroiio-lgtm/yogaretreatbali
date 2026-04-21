@@ -46,6 +46,8 @@ const defaultFaqs: FaqItem[] = [
   },
 ];
 
+const RELATED_LINK_COUNT = 4;
+
 const pages: Omit<SeoPage, "relatedSlugs">[] = [
   {
     slug: "yoga-retreat-bali",
@@ -176,7 +178,13 @@ export const seoPages: SeoPage[] = pages.map((page, index) => ({
   relatedSlugs: pages
     .map((candidate) => candidate.slug)
     .filter((slug) => slug !== page.slug)
-    .slice(index % 4, index % 4 + 4),
+    .slice(index, index + RELATED_LINK_COUNT)
+    .concat(
+      pages
+        .map((candidate) => candidate.slug)
+        .filter((slug) => slug !== page.slug)
+        .slice(0, Math.max(0, index + RELATED_LINK_COUNT - (pages.length - 1))),
+    ),
 }));
 
 export function getSeoPage(slug: string) {

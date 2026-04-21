@@ -5,6 +5,7 @@ export type Retreat = {
   duration: number;
   price: number;
   rating: number;
+  reviewCount: number;
   images: string[];
   description: string;
   style: "luxury" | "affordable" | "detox" | "meditation" | "beginner";
@@ -22,6 +23,7 @@ export const retreats: Retreat[] = [
     duration: 7,
     price: 850,
     rating: 4.9,
+    reviewCount: 184,
     images: [cardImage],
     description:
       "A balanced 7-day Bali yoga retreat with daily flow classes, guided breathwork, and nourishing local meals close to Ubud rice terraces.",
@@ -36,6 +38,7 @@ export const retreats: Retreat[] = [
     duration: 5,
     price: 780,
     rating: 4.8,
+    reviewCount: 152,
     images: [cardImage],
     description:
       "Sunrise yoga and beginner-friendly surf coaching in Canggu with flexible schedules for digital nomads.",
@@ -50,6 +53,7 @@ export const retreats: Retreat[] = [
     duration: 10,
     price: 2200,
     rating: 5,
+    reviewCount: 96,
     images: [cardImage],
     description:
       "Premium villa stay, private yoga coaching, spa therapies, and concierge planning for a luxury yoga retreat Bali experience.",
@@ -64,6 +68,7 @@ export const retreats: Retreat[] = [
     duration: 7,
     price: 990,
     rating: 4.7,
+    reviewCount: 128,
     images: [cardImage],
     description:
       "Clean eating, yoga therapy, and optional fasting guidance in a quiet valley focused on healing and reset.",
@@ -78,6 +83,7 @@ export const retreats: Retreat[] = [
     duration: 7,
     price: 1200,
     rating: 4.9,
+    reviewCount: 139,
     images: [cardImage],
     description:
       "Meditation-led mornings, sunset yin classes, and cliffside ocean views in one of Bali's most scenic regions.",
@@ -92,6 +98,7 @@ export const retreats: Retreat[] = [
     duration: 7,
     price: 640,
     rating: 4.6,
+    reviewCount: 211,
     images: [cardImage],
     description:
       "Low-cost yoga retreat package with shared accommodation, daily practice, and cultural activities in Sanur.",
