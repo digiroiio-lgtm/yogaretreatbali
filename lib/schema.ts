@@ -9,7 +9,7 @@ export function organizationSchema() {
     "@type": "Organization",
     name: "YogaRetreatBali",
     url: baseUrl,
-    logo: `${baseUrl}/icon.png`,
+    logo: `${baseUrl}/favicon.ico`,
     sameAs: ["https://www.instagram.com/yogaretreatbali"],
     description:
       "YogaRetreatBali is a curated marketplace helping travelers compare and book yoga retreats in Bali.",
